@@ -1,3 +1,5 @@
-Para descargar este proyecto debes ejecutar:
+usuario: admin
+contraseña: admin
 
-git clone https://github.com/Camilpaz/Practica_M5.git
+usuario: usuario
+contraeña: usuariousuario
