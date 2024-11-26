@@ -1,0 +1,28 @@
+{% extends "layouts/base.html" %}
+
+
+{% block contenido %}
+
+<header>
+    <h1 class="text-center">Agrega un nuevo Vehículo</h1>
+</header>
+
+<main class="container py-3">
+    <section>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+                <form enctype="multipart/form-data" method="post">
+                    {% csrf_token %}
+                    {{form}}
+                    <div class="d-flex justify-content">
+                       <input type="submit" class="btn border my-3" value="Enviar"> 
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+
+{% endblock contenido %}

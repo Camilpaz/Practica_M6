@@ -1,0 +1,42 @@
+{% extends "layouts/base.html" %}
+
+{% block contenido %}
+
+<header>
+    <h1 class="text-center">Listado de Vehículos</h1>
+</header>
+
+<section id='lista_vehiculos'>
+    <table>
+        <thead>
+            <tr>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Serial Carrocería</th>
+                <th>Serial Motor</th>
+                <th>Categoría</th>
+                <th>Precio</th>
+                <th>Condición de Precio</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for vehiculo in vehiculos %}
+                <tr>
+                    <td>{{ vehiculo.marca }}</td>
+                    <td>{{ vehiculo.modelo }}</td>
+                    <td>{{ vehiculo.serial_carroceria }}</td>
+                    <td>{{ vehiculo.serial_motor }}</td>
+                    <td>{{ vehiculo.categoria }}</td>
+                    <td>{{ vehiculo.precio }}</td>
+                    <td>{{ vehiculo.condicion_precio }}</td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="6" style="text-align: center;">No hay vehículos disponibles.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+
+{% endblock contenido %}
